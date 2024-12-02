@@ -1,0 +1,61 @@
+﻿@model IEnumerable<TP_final.Models.films>
+
+@{
+    ViewData["Title"] = "films";
+}
+
+
+<div class="d-flex justify-content-between">
+    <h1>Film</h1>
+    <p class="position-fixed" style="right:10px; z-index:1">
+        <a class="btn btn-secondary m-1" asp-action="Create"><i class="bi bi-plus"></i>Ajouter un film</a>
+    </p>
+</div>
+
+<div class="row justify-content-around">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 18rem;margin-top:20px;  border-radius: 15px">
+            <img src="@item.Photo" alt="@item.Nom" style="margin-top:30px !important;margin:20px; border-radius: 20px"/>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <b>Titre </b>: @item.Nom
+                </h5>
+                <p>
+                    <b>Categorie de film</b>: @item.filmCategorie
+                </p>
+                <p class="card-text">
+                    @item.Description
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Date de debut </b>: @item.debut</li>
+                <li class="list-group-item"><b>Date de fin </b>: @item.Fin</li>
+                <li class="list-group-item"><b>prix </b>: @item.prix</li>
+                @*Tester le status de projection d'un film*@
+                <li class="list-group-item card-text">
+                    <b>Status:</b>
+                    @if(DateTime.Now >= item.debut && DateTime.Now <= item.Fin)
+                    {
+                        <span class="badge bg-success">Encore Disponible</span>
+                    }
+                    else if (DateTime.Now >= item.Fin)
+                    {
+                        <span class="badge bg-danger">Expirer</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-info">Pas Encore disponible</span>
+                    }
+                </li>
+                @*Fin test Status*@
+            </ul>
+            <div class="card-body d-flex flex-column justify-content-around">
+                @* <a class="btn btn-success m-1"><i class="bi bi-cart-plus"></i>Ajouter(Prix: @item.prix) Fcfa</a> *@
+                <a class="btn btn-outline-info align-middle m-1" asp-action="Details" Asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i>Details</a>
+                <a class="btn btn-outline-primary  m-1" asp-action="Edit" Asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Modifier</a>
+                <a class="btn btn-danger align-middle m-1" asp-action="Delete" Asp-route-id="@item.Id" ><i class="bi bi-trash"></i>Delete</a>
+            </div>
+        </div>
+    }
+</div>

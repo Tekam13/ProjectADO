@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TP_final.Models.Acteur>
+
+@{
+    ViewData["Title"] = "Acteur";
+}
+
+<h1>Acteur</h1>
+
+<p style="position:fixed; right:25px;bottom:25px;">
+    <a class="btn btn-success m-1" asp-action="Create"><i class="bi bi-plus"></i>Ajouter un acteur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @* Photo de probleme *@
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bibloigraphie)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td class="align-middle">
+                    <img src="@item.Photo" alt="@item.Nom" style="width: 100px;" />
+                    @* @Html.DisplayFor(modelItem => item.Photo) *@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bibloigraphie)
+                </td>
+                <td class="align-middle">
+                    <a class="btn btn-outline-primary align-middle" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Modifier</a>
+                    <a class="btn btn-outline-info align-middle" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i>Details</a>
+                    <a class="btn btn-danger align-middle" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

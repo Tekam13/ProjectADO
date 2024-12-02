@@ -1,0 +1,109 @@
+﻿@model TP_final.Models.films
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details sur le Films @Model.Nom</h1>
+
+<hr />
+<div class="row" style="display: flex;justify-content:space-around;">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--Ajouter la previsualisation d'une photo de profile-->
+            <div class="form-group text-center">
+                <img id="PhotoProfilePreview" src="https://i.pinimg.com/564x/62/98/c9/6298c9062d27ae97f168d4ac61f04d4a.jpg" style="max-width: 530px;min-height: 530px;height: 400px;" />
+            </div>
+            <!--Fin-->
+        </form>
+    </div>
+    <div class="col-md-6" style="padding-top: 20px">
+        @* <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
+        <!--Ajouter la previsualisation d'une photo de profile-->
+        <div class="form-group text-center">
+            <img id="PhotoProfilePreview" style="max-width:100px" />
+        </div>
+        <!--Fin-->
+        <div class="form-group" style="padding-top: 20px">
+            <label asp-for="Photo" class="control-label"></label>
+            <input asp-for="Photo" class="form-control" />
+            <span asp-validation-for="Photo" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex" style="padding-top: 20px">
+            <label asp-for="Nom" class="control-label" style="font-weight:bold;"></label>
+            <input asp-for="Nom" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none; font-style:italic" />
+            <span asp-validation-for="Nom" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex" style="padding-top: 20px">
+            <label asp-for="filmCategorie" class="control-label" style="font-weight:bold;"></label>
+            <input asp-for="filmCategorie" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none; font-style:italic" />
+            <span asp-validation-for="filmCategorie" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="padding-top: 20px">
+            <label asp-for="Description" class="control-label" style="font-weight:bold;"></label>
+            <textarea asp-for="Description" cols="30" rows="5" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none; font-style:italic"></textarea>
+            @* <input asp-for="Description" class="form-control  border-0 p-0" style="padding-left: 20px !important" /> *@
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex" style="padding-top: 20px">
+            <label asp-for="debut" class="control-label" style="font-weight:bold;"></label>
+            <input asp-for="debut" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none; font-style:italic"   />
+            <span asp-validation-for="debut" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex" style="padding-top: 20px">
+            <label asp-for="Fin" class="control-label" style="font-weight:bold;"></label>
+            <input asp-for="Fin" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none;font-style:italic"   />
+            <span asp-validation-for="Fin" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex" style="padding-top: 20px;">
+            <label asp-for="prix" class="control-label" style="font-weight:bold;"></label>
+            <input asp-for="prix" class="form-control  border-0 p-0" style="padding-left: 20px !important; box-shadow:none;font-style:italic"  />
+            <span asp-validation-for="prix" class="text-danger"></span>
+        </div>
+        <div class="form-group d-flex justify-content-around" style="padding-top: 20px; padding-bottom : 20px">
+            <a class="btn btn-outline-primary align-middle" asp-action="Edit" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Modifier</a>
+            <a class="btn btn-outline-success align-middle" asp-action="Index">Back to file</a>
+        </div>
+    </div>
+</div>
+<div class="row" style="display: flex;justify-content:space-around;">
+    <div class="cart-text">
+        <b>Acteurs : </b>
+        <hr/>
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row">
+                @foreach (var Acteur_item in Model.ActeurFilms)
+                {
+                    <img src="@Acteur_item.Acteur.Photo" alt="@Acteur_item.Acteur.Nom" style="border-radius:20px; max-height: 150px; margin: 20px" />
+                }
+            </div>
+            <div class="d-flex flex-row">
+                @foreach (var Acteur_item in Model.ActeurFilms)
+                {
+                    <a class="btn btn-outline-info align-middle m-1" asp-controller="Acteur" asp-action="Details" Asp-route-id="@Acteur_item.Acteur.Id" style="margin: 20px !important"> @Acteur_item.Acteur.Nom</a>
+                    @* <a asp-controller="Acteur" asp-action="Details" asp-route-id="@Model.Id">@Acteur_item.Acteur.Nom</a> *@
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<!--Ajouter la previsualisation d'une photo de profile-->
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var output = document.getElementById('PhotoProfilePreview');
+            output.src = $("#Photo").val();
+        })
+        // $("#Photo").on("change", function () {
+        //     var output = document.getElementById('PhotoProfilePreview');
+        //     output.src = $(this).val();
+        // })
+    </script>
+}
+<!--Fin-->

@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TP_final
+build_property.RootNamespace = TP_final
+build_property.ProjectDir = G:\PAM2\Support de cours\PDF\ASP.Net\TP final\TP final\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\PAM2\Support de cours\PDF\ASP.Net\TP final\TP final
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Acteur/NotFound1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0ZXVyXE5vdEZvdW5kMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Film/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Film/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Film/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Film/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Film/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/PAM2/Support de cours/PDF/ASP.Net/TP final/TP final/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-pgayb1niv6

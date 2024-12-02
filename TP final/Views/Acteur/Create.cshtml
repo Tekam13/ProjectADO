@@ -1,0 +1,59 @@
+﻿@model TP_final.Models.Acteur
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Acteurs </h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--Ajouter la previsualisation d'une photo de profile-->
+            <div class="form-group text-center">
+                <img id="PhotoProfilePreview"/>
+            </div>
+            <!--Fin-->
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label"></label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bibloigraphie" class="control-label"></label>
+                <input asp-for="bibloigraphie" class="form-control" />
+                <span asp-validation-for="bibloigraphie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<!--Ajouter la previsualisation d'une photo de profile-->
+@section Scripts {
+    <script>
+            $(document).ready(function(){
+                    var output = document.getElementById('PhotoProfilePreview');
+                    output.src = $this.val();
+        })
+            $("#Photo").on("change", function () {
+                var output = document.getElementById('PhotoProfilePreview');
+                output.src = $(this).val();
+            })
+        </script>
+    }
+<!--Fin-->
